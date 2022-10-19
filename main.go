@@ -5,6 +5,9 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
+
+	"github.com/titoyudha/go_ecommerce_api/config/mysql"
+	rdb "github.com/titoyudha/go_ecommerce_api/config/redis"
 )
 
 func main() {
@@ -16,5 +19,9 @@ func main() {
 		})
 	})
 	fmt.Println("Server is running well")
+	mysql.DBConnection()
+
+	rdb.ClientConnection()
 	server.Run()
+
 }
