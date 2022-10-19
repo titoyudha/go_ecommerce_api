@@ -4,7 +4,7 @@ import "gorm.io/gorm"
 
 type Payment struct {
 	gorm.Model
-	PaymentID     string
+	PaymentID     string `gorm:"primarykey"`
 	Cart          []Cart
 	PaymentMethod string
 }
