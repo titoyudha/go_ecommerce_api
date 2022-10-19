@@ -26,6 +26,7 @@ func DBConnection() *gorm.DB {
 		panic(err)
 	}
 	db.AutoMigrate(&model.User{}, &model.Items{}, &model.Cart{}, &model.Payment{})
+	CloseDB(db)
 
 	return db
 }
