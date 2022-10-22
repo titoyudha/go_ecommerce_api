@@ -4,7 +4,7 @@ import "gorm.io/gorm"
 
 type Items struct {
 	gorm.Model
-	ItemID      string `gorm:"primarykey"`
+	ItemID      string
 	Title       string
 	Description string
 	ImageURL    string

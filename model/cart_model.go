@@ -4,7 +4,7 @@ import "gorm.io/gorm"
 
 type Cart struct {
 	gorm.Model
-	CartID     string `gorm:"primarykey"`
+	CartID     string
 	User       []User
 	Items      []Items
 	TotalPrice int

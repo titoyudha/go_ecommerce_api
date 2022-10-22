@@ -4,7 +4,7 @@ import "gorm.io/gorm"
 
 type User struct {
 	gorm.Model
-	UserID          string `gorm:"primarykey"`
+	UserID          string
 	FirstName       string
 	LastName        string
 	Email           string
